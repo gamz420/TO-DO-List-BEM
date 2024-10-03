@@ -1,0 +1,106 @@
+.todo {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Элементы для добавления задачи */
+.todo__add {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo__input, .todo__edit-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.todo__edit-input {
+    display: none; /* По умолчанию поле для редактирования скрыто */
+}
+
+.todo__button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.todo__button--delete {
+    background-color: #dc3545;
+}
+
+.todo__button--edit {
+    background-color: #ffc107;
+}
+
+/* Элементы списка */
+.todo__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.todo__task {
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.todo__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.todo__file-input {
+    display: none; /* По умолчанию скрываем инпут для файлов */
+}
+
+/* Стили для выполненных задач */
+.todo__checkbox:checked + .todo__task {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Показываем поле для редактирования при редактировании задачи */
+.todo__item--editing .todo__task {
+    display: none;
+}
+
+.todo__item--editing .todo__edit-input {
+    display: block;
+}
+
+.todo__item--editing .todo__button--edit {
+    display: none;
+}

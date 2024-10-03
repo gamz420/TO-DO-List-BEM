@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM TO DO List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="todo">
+        <h1 class="todo__title">BEM TO DO List</h1>
+        
+        <div class="todo__add">
+            <input class="todo__input" type="text" placeholder="Введите задачу...">
+            <button class="todo__button todo__button--add" type="button">Добавить</button>
+            <input type="file" class="todo__file-input">
+        </div>
+
+        <ul class="todo__list">
+            <li class="todo__item">
+                <input type="checkbox" class="todo__checkbox" id="task-1">
+                <label for="task-1" class="todo__task">Пример задачи</label>
+
+                <input type="text" class="todo__edit-input" value="Пример задачи">
+                
+                <button class="todo__button todo__button--edit" type="button">Редактировать</button>
+                <button class="todo__button todo__button--delete" type="button">Удалить</button>
+
+                <input type="file" class="todo__file-input">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
